@@ -6,11 +6,14 @@ import evaluators as e
 if __name__ == '__main__':
     print()
     print("1) Modify the infix-to-postfix algorithm so that it can handle errors.")
-    print(f"testing with bad input ('5 + 3') returns: {e.postfixEval('5 + 3')}")
-    print(f"testing again with valid ('5 3 +') input: {e.postfixEval('5 3 +')}")
+    print(f"testing with bad input ('3 j +') returns: {e.infixToPostfix('3 j +')}")
+    print(f"testing again with valid ('3 + 5') input returns: {e.infixToPostfix('3 + 5')}")
+
 
     print()
     print("2) Modify the postfix evaluation algorithm so that it can handle errors.")
+    print(f"testing with bad input ('5 + 3') returns: {e.postfixEval('5 + 3')}")
+    print(f"testing again with valid ('5 3 +') input returns: {e.postfixEval('5 3 +')}")
 
     print()
     print("3) Implement a direct infix evaluator that combines the functionality of infix-to-postfix "
