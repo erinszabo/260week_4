@@ -1,12 +1,13 @@
 """
 chap 4 exercises: 1,2,3,5,and 10 or 11
 """
-
+import evaluators as e
 
 if __name__ == '__main__':
     print()
-    print("1) Modify the infix-to-postfix "
-          "algorithm so that it can handle errors.")
+    print("1) Modify the infix-to-postfix algorithm so that it can handle errors.")
+    print(f"testing with bad input ('5 + 3') returns: {e.postfixEval('5 + 3')}")
+    print(f"testing again with valid ('5 3 +') input: {e.postfixEval('5 3 +')}")
 
     print()
     print("2) Modify the postfix evaluation algorithm so that it can handle errors.")
