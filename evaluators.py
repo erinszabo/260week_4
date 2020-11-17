@@ -81,6 +81,12 @@ def doMath(op, op1, op2):
         return op1 - op2
 
 
+def infix_eval(orig):
+    prob = infixToPostfix(orig)
+    sol = postfixEval(prob)
+    return sol
+
+
 """ TESTING BELOW """
 
 # class TestMethods(unittest.TestCase):
