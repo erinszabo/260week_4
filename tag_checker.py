@@ -55,5 +55,5 @@ def tag_checker(symbolString):
 
 def matches(open, close):
     opener = "<"
-    closer = ">"
+    closer = ">"  # maybe use "</" here instead? Didn't work but might just need tweaking
     return opener.index(open) == closer.index(close)
