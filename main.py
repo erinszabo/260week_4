@@ -3,6 +3,7 @@ chap 4 exercises: 1,2,3,5,and 10 or 11
 """
 import evaluators as e
 import queueADT as q
+import tag_checker as t
 
 if __name__ == '__main__':
     print()
@@ -30,6 +31,10 @@ if __name__ == '__main__':
     print(f" {x}")
 
     print()
-    print("...10 or 11 here...")
+    print("11) Write a program that can check an HTML document for proper opening and closing tags.")
+    # print(f" Test HTML should be balanced (True): {t.tag_checker('<html> <head> <title> Example </title> </head> <body> <h1>Hello, world</h1> </body> </html>')}")
+    print(f" Test HTML should be balanced (True): {t.tag_checker('<html> <head> <title> </title> </head> </html>')}")
+
+
     print()
     print()
