@@ -57,3 +57,25 @@ def matches(open, close):
     opener = "<"
     closer = ">"  # maybe use "</" here instead? Didn't work but might just need tweaking
     return opener.index(open) == closer.index(close)
+
+
+def tag_check(codeString):
+    """
+    :param codeString: the code that you want to check if the tags are balanced
+    :return: Boolean, True if Balanced, False if not Balanced
+    """
+    balanced = True
+    symbol_string = ""
+    close = ""
+    for i in codeString:
+        if i in "<":
+            symbol_string += i
+        if i in "/":
+            close += i
+    # print(symbol_string)
+    # print(close)
+    if len(symbol_string) % 2 != 0 or len(close) != len(symbol_string) // 2:
+        balanced = False
+    return balanced
+
+
